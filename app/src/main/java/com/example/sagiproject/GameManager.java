@@ -7,7 +7,6 @@ import java.util.List;
 public class GameManager {
     public static final int LEVEL_EASY = 1, LEVEL_HARD = 2;
 
-    public Player player;
     public RoundData currentRound;
     public int matchedCount = 0;
     
@@ -22,7 +21,6 @@ public class GameManager {
 
     public void startNewGame(int level, String name) {
         this.level = level;
-        this.player = new Player(name);
     }
 
     public RoundData startRound(int startIndex) {
@@ -73,9 +71,6 @@ public class GameManager {
         if (correct) {
             matchedLeft[leftIdx] = matchedRight[rightIdx] = true;
             matchedCount++;
-            player.addScore(10);
-        } else {
-            player.addScore(-5);
         }
         return new MatchResult(correct, matchedCount == 4, 0, leftIdx, rightIdx);
     }

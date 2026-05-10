@@ -68,7 +68,6 @@ public class GameActivity extends AppCompatActivity {
 
         RoundData round = gameManager.startRound(fb.currentIndex);
         applyRoundToButtons(round);
-        updateUI();
     }
 
     private void requestNewWordsFromAI() {
@@ -119,7 +118,6 @@ public class GameActivity extends AppCompatActivity {
                 rightBtns[result.rightIndex].setAlpha(0.5f);
             }
         }
-        updateUI();
     }
 
     private void applyRoundToButtons(RoundData round) {
@@ -144,9 +142,6 @@ public class GameActivity extends AppCompatActivity {
         leftBtns[index].setBackgroundResource(R.drawable.button_selected);
     }
 
-    private void updateUI() {
-        txtScore.setText("Score: " + gameManager.player.score);
-    }
 
     public static String wordListToString(ArrayList<WordPair> list) {
         StringBuilder sb = new StringBuilder();
