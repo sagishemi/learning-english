@@ -3,7 +3,6 @@ package com.example.sagiproject;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +17,6 @@ public class GameActivity extends AppCompatActivity {
     private Button[] leftBtns  = new Button[4];
     private Button[] rightBtns = new Button[4];
 
-    private TextView txtScore;
     private GameBoardView boardView;
     WordRepository wordRepository = new WordRepository();
 
@@ -46,7 +44,6 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        txtScore = findViewById(R.id.txtScore);
         boardView = findViewById(R.id.boardView);
 
         for (int i = 0; i < 4; i++) {

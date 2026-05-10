@@ -1,75 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/game_bg"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- פאנל ניקוד מרכזי לשחקן יחיד -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:elevation="4dp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:layout_marginBottom="32dp">
-
-        <TextView
-            android:id="@+id/txtScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Score: 0"
-            android:textColor="#1E293B"
-            android:textStyle="bold"
-            android:textSize="22sp"/>
-    </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.9"
-                android:orientation="vertical"
-                android:gravity="center">
-                <Button android:id="@+id/btnL0" style="@style/GameButtonStyle"/>
-                <Button android:id="@+id/btnL1" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
-                <Button android:id="@+id/btnL2" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
-                <Button android:id="@+id/btnL3" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
-            </LinearLayout>
-
-            <View android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.9"
-                android:orientation="vertical"
-                android:gravity="center">
-                <Button android:id="@+id/btnR0" style="@style/GameButtonStyle"/>
-                <Button android:id="@+id/btnR1" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
-                <Button android:id="@+id/btnR2" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
-                <Button android:id="@+id/btnR3" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
-            </LinearLayout>
+            android:layout_weight="0.9"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button android:id="@+id/btnL0" style="@style/GameButtonStyle"/>
+            <Button android:id="@+id/btnL1" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
+            <Button android:id="@+id/btnL2" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
+            <Button android:id="@+id/btnL3" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
         </LinearLayout>
 
-        <com.example.sagiproject.GameBoardView
-            android:id="@+id/boardView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </FrameLayout>
-</LinearLayout>
+        <View android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button android:id="@+id/btnR0" style="@style/GameButtonStyle"/>
+            <Button android:id="@+id/btnR1" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
+            <Button android:id="@+id/btnR2" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
+            <Button android:id="@+id/btnR3" style="@style/GameButtonStyle" android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.example.sagiproject.GameBoardView
+        android:id="@+id/boardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
