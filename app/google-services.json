@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "597177951558",
+    "firebase_url": "https://sagiproject-401aa-default-rtdb.firebaseio.com",
+    "project_id": "sagiproject-401aa",
+    "storage_bucket": "sagiproject-401aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597177951558:android:901505aaccd759b902b147",
+        "android_client_info": {
+          "package_name": "com.example.sagiproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLt0sKCbJK-8roKSEuhI_3c5VRaHpSZkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
